@@ -1,0 +1,15 @@
+@import "src/styles/theme.variables.scss";
+
+.Footer{
+	background: $colorBrown;
+	color: rgba(255,255,255,.6);
+  padding: 120px 0;
+  img{
+    height: 100px;
+  }
+  p{
+    max-width: 500px;
+    font-size: 0.7rem;
+    margin: 0 auto 0;
+  }
+}

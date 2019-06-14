@@ -1,0 +1,150 @@
+/** Extra Large screens **/
+@media (min-width: 1920px) {
+  html{
+    font-size: 125%!important;
+  }
+}
+
+/** Large screens **/
+@media (max-width: 1200px) {
+  html{
+    font-size: 100%!important;
+  }
+}
+
+/** Medium screens **/
+@media (max-width: 992px) {
+  html{
+    font-size: 90%!important;
+  }
+}
+
+/** Small screens **/
+@media (max-width: 767px) {
+  .container-fluid{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .homepage-intro{
+    max-height: calc(100vh - 60px);
+    & > div{
+      height: calc(100vh - 60px);
+    }
+  }
+  
+  .homepage-back-btn{
+    position: absolute;
+    cursor: pointer;
+    top: 80px;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: 0;
+    transform: translateX(-150px);
+    &.active{
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+    img{
+      width: 35px;
+    }
+    i{
+      top: -25px;
+      left: -33px;
+      padding-top: 0;
+      transform: none;
+    }
+  }
+
+  /** Slide 1 **/
+  .fc-introbox{
+    right: 0;
+    transform: translate(0, 20%);
+  }
+  .fc-introbox2{
+    transform: translate(45px, -50px);
+    max-width: 70vw;
+    left: 0;
+  }
+  
+  /** Slide 2 **/
+  .fc-designimagebox{
+    transform: translate(-45px, 80px);
+    max-width: 70vw!important;
+  }
+  .fc-designbox{
+    transform: translate(15px, -22%);
+  }
+
+  /** Slide 3 **/
+  .fc-evaluationbox{
+    margin: 10px auto;
+    min-width: 0;
+    transform: none;
+  }
+
+  /** Slide 4 **/
+  .fc-developmentbox{
+    transform: translate(45px, 40px);
+    max-width: 70vw!important;
+    right: 0;
+  }
+  .fc-developmentbox2{
+    transform: translate(-15px, -22%);
+    left: 0;
+  }
+
+  /** Slide 5 **/
+  .fc-releasebox{
+    transform: translate(-45px, 40px);
+    max-width: 70vw!important;
+  }
+  .fc-releasebox2{
+    transform: translate(15px, -22%);
+  }
+
+  /** Slide 6 **/
+  .fc-clientbox{
+    transform: translate(15px, 22%);
+  }
+  .fc-clientbox2{
+    transform: translate(-25px, -40px);
+    max-width: 76vw!important;
+  }
+  
+  .fc-introbox,
+  .fc-developmentbox,
+  .fc-releasebox,
+  .fc-clientbox,
+  .fc-clientbox2{
+    float: none;
+  }
+
+  .fc-slider .slide-image{
+    display: none;
+  }
+
+  .homepage-intro-boxes{
+    order: 0;
+  }
+
+  .homepage-content{
+    order: 1;
+  }
+
+  .fc-slide-3{
+    .bg-gray{
+      display: none;
+    }
+  }
+
+  .section-text{
+    margin-top: 40px;
+  }
+}
+
+/** Phones **/
+@media (max-width: 576px) {
+
+}

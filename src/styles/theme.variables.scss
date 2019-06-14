@@ -1,0 +1,32 @@
+/**
+ * Variables
+ */
+$colorPrimary: #2d3142;
+$colorAccent: #c14953;
+
+$colorGray: #738290;
+$colorLightGray: #ffffff;
+$colorDarkGray: #4f5d75;
+$colorBrown: #332d2f;
+
+$colorSuccess: rgb(12, 182, 12);
+$colorError: rgb(228, 24, 24);
+
+
+/**
+ * Mixins
+ */
+@mixin horizontalGradient($left, $right){
+  background: -moz-linear-gradient(left, $left 0%, $right 100%);
+  background: -webkit-linear-gradient(left, $left 0%,$right 100%);
+  background: linear-gradient(to right, $left 0%,$right 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$left, endColorstr=$right,GradientType=1 );
+}
+
+@mixin diagonalGradient($bottom, $top){
+  background: $bottom;
+  background: -moz-linear-gradient(45deg, $bottom 0%, $top 100%);
+  background: -webkit-linear-gradient(45deg, $bottom 0%,$top 100%);
+  background: linear-gradient(45deg, $bottom 0%,$top 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$bottom, endColorstr=$top,GradientType=1 );
+}

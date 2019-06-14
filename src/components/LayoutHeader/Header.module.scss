@@ -1,0 +1,427 @@
+@import "src/styles/theme.variables.scss";
+
+.Header {
+  position: fixed;
+  width: 100%;
+  z-index: 600;
+  background: white;
+}
+.HeaderTitle {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  position: static;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg,#123b78,#123b78 50%,#e9ecef 0);
+    z-index: -1;
+  }
+  .HeaderLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 35px;
+    position: relative;
+    // width: 41.666667%;
+    
+    .HeaderLogoImg {
+      width: 100px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .HeaderDescription {
+    position: relative;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 320px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #e9ecef;
+      z-index: -1;
+      transform: skewX(-20deg);
+    }
+    .HeaderDescriptionText {
+      &::after {
+        content: "";
+        width: 7px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -7px;
+        right: 0;
+        background: linear-gradient(0deg,#cf0202,#cf0202 70%,transparent 0);
+        z-index: -1;
+        transform: skewX(-20deg);
+      }
+    }
+
+  }
+  .HeaderContact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ced4da;
+      z-index: -1;
+      transform: skewX(-20deg);
+    }
+    
+    .HeaderContactDescription {
+        font-size: .8rem;
+        font-weight: 300;
+    }
+
+    .HeaderContactPhone {
+        color: #cf0202;
+        font-size: .9rem;
+        font-weight: 700;
+    }
+  }
+
+
+  .HeaderMenu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #e9ecef;
+      z-index: -1;
+      transform: skewX(-20deg);
+    }
+  }
+}
+.NavBar {
+  width: 100%;
+  height: 55px;
+  background: #0e213c;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
+.Logo{
+  display: block;
+  width: 55px;
+  height: 55px;
+  background: $colorPrimary;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow .2s, background .2s;
+  img{
+    margin: 0;
+    width: 26px;
+  }
+  &:hover{
+    background: $colorAccent;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+  }
+  &.Light{
+    color: #fff;
+    background: #fff;
+    &:hover{
+      background: #f7f7f7;
+    }
+  }
+}
+
+.HeaderSideLogo{
+  position: fixed;
+  bottom: 50px;
+  left: 62px;
+	z-index: 600;
+}
+
+.SideLogo{
+  img{
+    margin: 0;
+    width: 25px;
+  }
+}
+
+.Nav{
+  // position: fixed;
+  // top: 55px;
+  // right: 50px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-end;
+  // max-width: 75vw;
+  // z-index: 600;
+  width: 100%;
+  max-width: 930px;
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    // opacity: 0;
+    // visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // transform: translate(50px, 0) skewX(-80deg);
+    // transition: transform .4s, visibility .2s, opacity .2s;
+  }
+  li{
+    margin: 0;
+    align-items: center;
+    display: flex;
+  }
+  &.Opened{
+    ul{
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0, 0) skewX(0deg);
+    }
+  }
+  a{
+    color: $colorPrimary;
+    background: none;
+    display: block;
+    padding: 3px 0 8px;
+    margin: 0 10px;
+    position: relative;
+    text-decoration: none!important;
+    transition: color 1s;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 8px;
+      right: 8px;
+      height: 2px;
+      background: $colorPrimary;
+      visibility: hidden;
+      transform: scaleX(0);
+      transform-origin: 50% 50%;
+      transition: transform .3s, visibility .3s;
+    }
+  }
+  a:hover,
+  a.Active{
+    &:after{
+      visibility: visible;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.Light{
+  a{
+    color: #fff;
+    font-size: 14px;
+    max-width: 140px;
+    text-align: center;
+    &:after{
+      background: #fff;
+    }
+  }
+  .NavButton span{
+    background: #fff;
+  }
+}
+
+.NavButton{
+  order: 2;
+  display: block;
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+	background: none;
+	border: none;
+  outline: none;
+  margin-left: 5px;
+  transform: translateY(-2px);
+  z-index: 10;
+  cursor: pointer;
+  span{
+    display: block;
+    height: 2px;
+    background: $colorPrimary;
+    transform-origin: 50% 50%;
+    transition: transform .2s, opacity .2s, color 1s;
+  }
+  span + span{
+    margin-top: 6px;
+  }
+  .Line2{
+    transform-origin: 0 50%;
+    transform: scaleX(0.75) translate(0, 0);
+  }
+  &:hover{
+    .Line2{
+      transform: scaleX(1);
+    }
+  }
+}
+
+.Opened{
+  .Line2{
+    opacity: 0;
+    transform: translate(10px, 0);
+  }
+  .Line1{
+    transform: translateY(8px) rotate(-45deg);
+  }
+  .Line3{
+    transform: translateY(-8px) rotate(45deg);
+  }
+}
+
+@media(max-width: 767px){
+  .HeaderLogo{
+    top: 15px;
+    left: 15px;
+  }
+  .HeaderSideLogo{
+    display: none;
+  }
+  .Nav{
+    top: 25px;
+    right: 15px;
+  }
+  .NavButton{
+    background: #fff;
+    z-index: 9000;
+    transition: background .3s;
+  }
+  .Light{
+    .NavButton {
+      background: none;
+      span{
+        background: #fff;
+      }
+    }
+  }
+  .Nav{
+    z-index: 9999;
+    ul{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 30px 0;
+      flex-direction: column;
+      justify-content: center;
+      overflow: auto;
+      z-index: 8888;
+      transform: none;
+      transition: visibility .5s, opacity .5s;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparentize($colorPrimary, 0.1);
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: opacity .5s, transform .5s;
+      }
+    }
+    li{
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 180%;
+      overflow: hidden;
+    }
+    &.Opened{
+      ul{
+        &:before{
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .NavButton {
+        background: $colorPrimary;
+        span{
+          background: #fff!important;
+        }
+      }
+      a{
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    a{
+      color: #fff;
+      margin: 0;
+      padding: 20px 30px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      flex: 1;
+      font-weight: 600;
+      font-family: 'Poppins', Helvetica, sans-serif;
+      opacity: 0;
+      transform: translateX(-100px);
+      transition: background .3s, opacity .3s, transform .3s;
+      transition-delay: 0s, .1s, .1s;
+      &:after{
+        content: none;
+      }
+    }
+    a:hover,
+    a.Active{
+      background: $colorAccent;
+    }
+    li:nth-child(2) a{
+      transition-delay: 0s, .2s, .2s;
+    }
+    li:nth-child(3) a{
+      transition-delay: 0s, .3s, .3s;
+    }
+    li:nth-child(4) a{
+      transition-delay: 0s, .4s, .4s;
+    }
+    li:nth-child(5) a{
+      transition-delay: 0s, .5s, .5s;
+    }
+    li:nth-child(6) a{
+      transition-delay: 0s, .6s, .6s;
+    }
+  }
+}
