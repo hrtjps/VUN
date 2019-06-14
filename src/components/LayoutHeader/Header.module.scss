@@ -1,10 +1,15 @@
 @import "src/styles/theme.variables.scss";
 
 .Header {
-  position: fixed;
   width: 100%;
-  z-index: 600;
   background: white;
+  position: fixed;
+  z-index: 600;
+}
+
+.HomeIcon {
+  font-size: 1.5rem;
+  color: greenyellow;
 }
 .HeaderTitle {
   height: 120px;

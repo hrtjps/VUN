@@ -5,6 +5,7 @@ import { LayoutContextProvider } from "./LayoutContext"
 
 import styles from "./Layout.module.scss"
 import { LayoutContext } from ".";
+import Footer from "../LayoutFooter";
 
 const Layout = ({ children, location, pageContext }) => {
   return (
@@ -21,6 +22,8 @@ const Layout = ({ children, location, pageContext }) => {
           <main className={styles.Main}>
             {children}         
           </main>
+
+          <Footer />
         </LayoutContextProvider>
       </div>
     </>

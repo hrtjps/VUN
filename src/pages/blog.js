@@ -96,8 +96,6 @@ const BlogPage = ({ data }) => {
           )
         })}
       </div>
-
-      <Footer/>
     </>
   )  
 }

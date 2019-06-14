@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 
 import styles from './Header.module.scss';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 class HeaderNav extends Component {
 
   constructor(props){
@@ -56,8 +58,8 @@ class HeaderNav extends Component {
       <nav 
         className={[
           styles.Nav,
-          theme === 'dark' || forceDarkTheme === true ? styles.Dark : styles.Light,
-          navOpened === true ?styles.Opened : null
+          styles.Light,
+          styles.Opened
         ].join(' ')}
         aria-label="Main"
       >
@@ -74,7 +76,7 @@ class HeaderNav extends Component {
         </button> */}
         <ul onClick={this.toggleNav}>
           <li>
-            <Link to="/" activeClassName={styles.Active}>Home</Link>
+            <Link to="/" activeClassName={styles.Active}><FontAwesomeIcon icon="home" className={styles.HomeIcon}></FontAwesomeIcon></Link>
           </li>
           <li>
             <Link to="#" activeClassName={styles.Active}>TOURIST / BUSINESS VISA(B1/B2)</Link>
