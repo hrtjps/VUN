@@ -20,6 +20,7 @@ module.exports = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                templateKey
               }
             }
           }

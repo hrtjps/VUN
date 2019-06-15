@@ -1,0 +1,138 @@
+.HeaderSection {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:  16px;
+  .HeaderImg {
+    margin: 0 15px;
+  }
+  .TopReason {
+    width: 340px;
+    // margin: 0 15px;
+    
+    .TopReasonTitle {
+      background-color: #ba102d;
+      border-radius: 10px 10px 0 0;
+      border: 1px solid #e7eae7;
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 45px;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    .TopReasonContent {
+      border: 1px solid #e7eae7;
+      .TopReasonItem {
+        font-size: 15px;
+        font-weight: 500;
+        padding-left: 50px;
+        background-image: url(../assets/images/list-ok-icon.png);
+        background-repeat: no-repeat;
+        background-position: 20px 5px;
+        line-height: 25px;
+      }
+    }
+  }
+  .StartBtn {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.VisaSection {
+  margin-top: 20px;
+  text-align: center;
+  .VisaTitle {
+    color: #006dae;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+  }
+
+  .VisaDescription {
+    margin-bottom: 40px;
+  }
+}
+
+.HowWorkSection {
+  margin-top: 20px;
+  background-image: url(../assets/images/second-background.jpg);
+  background-size: cover;
+  color: #fff;
+  margin-top: 20px;
+  text-align: center;
+  .HowWorkTitle {
+    font-family: Merriweather,serif;
+    margin-top: 15px;
+    font-size: 43px;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit !important;
+  }
+  .HowWorkSubtitle {
+    font-family: Merriweather,serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: inherit !important;
+  }
+  .HowWorkItems {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .HowWorkItem {
+      background: #ba1732;
+      padding: 20px;
+      border-radius: 100px;
+      height: 190px;
+      width: 190px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      .HowWorkItemImg {
+        width: 65px;
+        height: 65px;
+      }
+      .HowWorkItemContent {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.2;
+        color: white;
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.MembersSection {
+  .GrayBackground {
+    background: #e9ecef;
+  }
+  .MemberItem {
+    display: flex;
+    padding: 30px 0;
+    .MemberImg {
+      width: 130px;
+      height: 130px;
+      background-position: center center;
+      background-size: cover;
+      margin: 0 auto;
+      border: 2px solid #0e213c;
+      border-radius: 50%;
+    }
+    .MemberItemContent {
+      margin-left: 40px;
+
+
+    }
+  }
+}

@@ -1,11 +1,10 @@
-import React, { Component } from "react"
-import { graphql, Link } from "gatsby"
+import React from "react"
+import { graphql } from "gatsby"
 
 import SEO from "../components/SEO"
 
-import { LayoutContext } from "../components/Layout"
-
-import arrowIcon from "../assets/images/arrow-icon.svg"
+// import { LayoutContext } from "../components/Layout"
+import HomePageTemplate from "../templates/home-page";
 
 export const fluidImageBig = graphql`
   fragment fluidImageBig on File {
@@ -18,53 +17,76 @@ export const fluidImageBig = graphql`
 `
 
 export const query = graphql`
-  query {
+  query HomePageTemplate {
     site {
       siteMetadata {
         title
       }
     }
-    background: file(relativePath: { eq: "homepage.jpg" }) {
-      ...fluidImageBig
+    markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
+      id
+      excerpt(pruneLength: 160)
+      html
+      frontmatter {
+        title
+
+        summary {
+          title
+          desciption
+        }
+        intro {
+          title
+          characters
+        }
+        featured_image {
+          childImageSharp {
+            fixed(width: 708) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        how_works {
+          title
+          subtitle
+          items {
+            url
+            content
+            img {
+              childImageSharp {
+                fixed(width: 600) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+        members {
+          name
+          content
+          img {
+            childImageSharp {
+              fixed(width: 130, height: 130) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
     }
   }
 `
 
-class IndexPage extends Component{ 
+const IndexPage = ({ data }) => {
 
-  state = {
-    currentSlide: 0
-  }
-
-  setCurrentSlide(index){
-    this.setState({
-      currentSlide: index
-    });
-  }
-
-  render() {
-    const { data, location } = this.props; 
-    const { currentSlide } = this.state;
-
-    return(
-      <>
-        <SEO 
-          title="Seo Title" 
-          description="Seo Description"
-        />
-
-        <LayoutContext.Consumer>
-          {({setHeaderLeftTheme, setHeaderRightTheme}) => {
-            setHeaderLeftTheme('dark');
-            setHeaderRightTheme('light');
-          }}
-        </LayoutContext.Consumer>
-
-
-      </>
-    )
-  }
-
+  return (
+    <>
+      <SEO 
+        title="Seo Title" 
+        description="Seo Description"
+      />
+      <HomePageTemplate data={data} />
+    </>
+  )
 }
 
 export default IndexPage

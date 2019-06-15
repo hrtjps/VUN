@@ -9,8 +9,8 @@ import arrowIcon from "../assets/images/arrow-icon.svg"
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
-  const { previous, next, slug } = pageContext
-  const { headerLeftTheme, headerRightTheme, categories, tags } = post.frontmatter;
+  const { previous } = pageContext
+  const { headerLeftTheme, headerRightTheme, categories } = post.frontmatter;
 
   let background = post.frontmatter['featured_image']
   if(background){

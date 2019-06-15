@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Perfected App`,
+    title: `Visa USA Now; B1 Business Visa and B2 Tourist Visas for the USA`,
     description: `Seo Description`,
     siteUrl: `https://perfectedapp.co.uk`
   },
@@ -11,8 +11,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content`,
+        name: `pages`,
       },
     },
     {
@@ -53,8 +53,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Perfected App`,
-        short_name: `Perfected App`,
+        name: `VUN MarketingSite`,
+        short_name: `Visa USA Now`,
         start_url: `/`,
         background_color: `#c14953`,
         theme_color: `#c14953`,

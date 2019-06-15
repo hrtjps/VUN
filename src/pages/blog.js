@@ -1,8 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 
 import SEO from "../components/SEO"
-import Footer from "../components/LayoutFooter"
 import BlogPost from "../components/BlogPost";
 
 import { LayoutContext } from "../components/Layout"

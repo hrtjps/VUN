@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { TransitionGroup, CSSTransition } from 'react-transition-group'
+// import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 import SEO from "../components/SEO"
 

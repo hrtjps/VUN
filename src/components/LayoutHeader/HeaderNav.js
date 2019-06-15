@@ -29,18 +29,18 @@ class HeaderNav extends Component {
   }
 
   detectNavTheme(){
-    const { forceDarkTheme } = this.state;
+    // const { forceDarkTheme } = this.state;
 
     // Force nav dark theme when user scrolls below 300px
-    if (window.scrollY > 300 && forceDarkTheme === false) {
-      this.setState({
-        forceDarkTheme: true
-      });
-    } else if(window.scrollY <= 300 && forceDarkTheme === true){
-      this.setState({
-        forceDarkTheme: false
-      });
-    }
+    // if (window.scrollY > 300 && forceDarkTheme === false) {
+    //   this.setState({
+    //     forceDarkTheme: true
+    //   });
+    // } else if(window.scrollY <= 300 && forceDarkTheme === true){
+    //   this.setState({
+    //     forceDarkTheme: false
+    //   });
+    // }
   }
 
   toggleNav(){
@@ -51,8 +51,8 @@ class HeaderNav extends Component {
   }
 
   render() {
-    const { theme } = this.props;
-    const { navOpened, forceDarkTheme } = this.state;
+    // const { theme } = this.props;
+    // const { navOpened, forceDarkTheme } = this.state;
 
     return (
       <nav 
@@ -79,22 +79,22 @@ class HeaderNav extends Component {
             <Link to="/" activeClassName={styles.Active}><FontAwesomeIcon icon="home" className={styles.HomeIcon}></FontAwesomeIcon></Link>
           </li>
           <li>
-            <Link to="#" activeClassName={styles.Active}>TOURIST / BUSINESS VISA(B1/B2)</Link>
+            <Link to="/" activeClassName={styles.Active}>TOURIST / BUSINESS VISA(B1/B2)</Link>
           </li>
           <li>
-            <Link to="#" activeClassName={styles.Active}>C1 Transit Visa</Link>
+            <Link to="/" activeClassName={styles.Active}>C1 Transit Visa</Link>
           </li>
           <li>
             <Link to="/blog/" activeClassName={styles.Active}>About Us</Link>
           </li>
           <li>
-            <Link to="/cotact/" activeClassName={styles.Active}>Contact Us</Link>
+            <Link to="/contact/" activeClassName={styles.Active}>Contact Us</Link>
           </li>
           <li>
-            <Link to="#" activeClassName={styles.Active}>Embassy Info</Link>
+            <Link to="/" activeClassName={styles.Active}>Embassy Info</Link>
           </li>
           <li>
-            <Link to="#" activeClassName={styles.Active}>Apply for Visa</Link>
+            <Link to="/" activeClassName={styles.Active}>Apply for Visa</Link>
           </li>
         </ul>
       </nav>

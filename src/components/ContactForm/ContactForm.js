@@ -73,7 +73,6 @@ export default class ContactForm extends Component {
       email: email.value,
       message: message.value
     });
-    console.log('Submitting contact form', data);
 
     axios({
       method: 'post',
@@ -85,7 +84,6 @@ export default class ContactForm extends Component {
       crossDomain: true,
       data: data,
     }).then(res => {
-      console.log(res.data);
       if(res.data.errorMessage){
         this.setState({
           loading: false,
