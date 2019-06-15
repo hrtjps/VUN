@@ -8,15 +8,12 @@ import { LayoutContext } from "../components/Layout"
 import styles from "./home-page.module.scss"
 import StartAppBtn from "../components/StartAppBtn";
 import PaymentSection from "../components/PaymentSection/PaymentSection";
+import MemberSection from "../components/Members";
 
 const HomePageTemplate = ({ data }) => {
   const page_data = data.markdownRemark.frontmatter;
   const { headerLeftTheme, headerRightTheme } = page_data;
 
-  let background = page_data['featured_image']
-  if(background){
-    background = background.childImageSharp.sizes
-  }
   return (
     <>
       <SEO
@@ -95,27 +92,8 @@ const HomePageTemplate = ({ data }) => {
         </div>
       </div>
 
-      <div className={styles.MembersSection}>
-        {
-          page_data.members.map((item, index) => (
-            <div className={index % 2 === 1 ? styles.GrayBackground : null } key={index} >
-              <div className="container " >
-                <div className={styles.MemberItem} key={index} >
-                  <div>
-                  {item.img ?
-                    <Img fixed={item.img.childImageSharp.fixed} alt="" className={styles.MemberImg} />
-                    : null
-                  }
-                  </div>
-                  <div className={styles.MemberItemContent}>
-                    {item.content}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))
-        }
-      </div>
+      <MemberSection />
+
       <PaymentSection />
     </>
   )

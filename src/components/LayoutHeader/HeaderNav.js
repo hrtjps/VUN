@@ -79,7 +79,7 @@ class HeaderNav extends Component {
             <Link to="/" activeClassName={styles.Active}><FontAwesomeIcon icon="home" className={styles.HomeIcon}></FontAwesomeIcon></Link>
           </li>
           <li>
-            <Link to="/" activeClassName={styles.Active}>TOURIST / BUSINESS VISA(B1/B2)</Link>
+            <Link to="/ds160/" activeClassName={styles.Active}>TOURIST / BUSINESS VISA(B1/B2)</Link>
           </li>
           <li>
             <Link to="/" activeClassName={styles.Active}>C1 Transit Visa</Link>

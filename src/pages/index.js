@@ -53,20 +53,9 @@ export const query = graphql`
             content
             img {
               childImageSharp {
-                fixed(width: 600) {
+                fixed(width: 65) {
                   ...GatsbyImageSharpFixed
                 }
-              }
-            }
-          }
-        }
-        members {
-          name
-          content
-          img {
-            childImageSharp {
-              fixed(width: 130, height: 130) {
-                ...GatsbyImageSharpFixed
               }
             }
           }
