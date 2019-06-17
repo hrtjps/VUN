@@ -1,0 +1,47 @@
+.HeaderSection {
+  display: flex;
+  justify-content: center;
+  // flex-wrap: wrap;
+  border: 1px solid #000;
+  padding-bottom: 1px;
+  margin-top: 20px;
+  // color: black;
+  .HeaderContent {
+    min-height: 615px;
+    max-width: 50%;
+    background: #deeff7;
+    padding: 24px;
+    .HeaderTitle {
+      font-weight: 700;
+      margin-bottom: .5rem;
+      line-height: 1.1;
+      font-size: 2.5rem;
+    }
+    .HeaderSubtitle {
+      color: #175dc4;
+      font-size: 19px;
+      margin-bottom: 20px;
+    }
+    .HeaderContents {
+      .HeaderItem {
+        padding-bottom: 10px;
+        position: relative;
+        padding-left: 30px;
+
+        &::before {
+          content: url(../../assets/images/check.png);
+          position: absolute;
+          left: 0;
+          top: 5px;
+        }
+      }
+    }
+    .HeaderStartBtn {
+      padding: 20px 0;
+    }
+  }
+  .HeaderImg {
+    margin: 0;
+  }
+  
+}
