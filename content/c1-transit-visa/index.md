@@ -14,11 +14,11 @@ intro:
   title: Get Assistance in Applying for Your C1 Transit Visa
   subtitle: Over 1,060 applicants approved from and across the globe!
   characters:
-    - Step-by-step assistance 
-    - English & Spanish Assistance
-    - Thousands of satisfied customers
-    - Secure, efficient application submission
+    - Step-by-step assistance
+    - Conduct mock interview for your one-on-one interview
+    - Secure encryption to submit and pay for your application and services
     - Price is only $159 + Government Fee of $160
+    - C1-Transit-Visa
   note: ''
   img: ./imgs/arrow-btn.png
 special:

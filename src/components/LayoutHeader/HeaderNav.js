@@ -85,7 +85,7 @@ class HeaderNav extends Component {
             <Link to="/c1-transit-visa" activeClassName={styles.Active}>C1 Transit Visa</Link>
           </li>
           <li>
-            <Link to="/blog/" activeClassName={styles.Active}>About Us</Link>
+            <Link to="/about-us/" activeClassName={styles.Active}>About Us</Link>
           </li>
           <li>
             <Link to="/contact/" activeClassName={styles.Active}>Contact Us</Link>
