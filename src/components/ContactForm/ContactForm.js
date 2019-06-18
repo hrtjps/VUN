@@ -139,48 +139,54 @@ export default class ContactForm extends Component {
 
         {!response && (
           <div className="form-inner">
-            <input 
-              type="text" 
-              className="form-control fadein-anim" 
-              placeholder="My name is"
-              value={name.value} 
-              onChange={(e) => this.handleInputChange('name', e)}
-              aria-required="true"
-              aria-invalid={!name.valid && name.touched}
-              required
-            />
-            {!name.valid && name.touched && (
-              <span className="error-message">Name is required</span>
-            )}
-
-            <input 
-              type="email" 
-              className="form-control fadein-anim" 
-              placeholder="My personal email is"
-              value={email.value} 
-              onChange={(e) => this.handleInputChange('email', e)}
-              aria-required="true"
-              aria-invalid={!email.valid && email.touched}
-              required
-            />
-            {!email.valid && email.touched && (
-              <span className="error-message">Email is not valid</span>
-            )}
-
-            <textarea 
-              className="form-control fadein-anim" 
-              placeholder="I'd like to talk about"
-              value={message.value} 
-              onChange={(e) => this.handleInputChange('message', e)}
-              rows="4"
-              aria-required="true"
-              aria-invalid={!message.valid && message.touched}
-              required
-            ></textarea>
-            {!message.valid && message.touched && (
-              <span className="error-message">Message is required</span>
-            )}
-
+            <div className={styles.FormGroup}>
+              <label>Wells Fargo Center:</label>
+              <input 
+                type="text" 
+                className="form-control fadein-anim" 
+                placeholder=""
+                value={name.value} 
+                onChange={(e) => this.handleInputChange('name', e)}
+                aria-required="true"
+                aria-invalid={!name.valid && name.touched}
+                required
+              />
+              {!name.valid && name.touched && (
+                <span className="error-message">Name is required</span>
+              )}
+            </div>
+            <div className={styles.FormGroup}>
+              <label>1700 Lincoln Street 17th Floor Denver CO:</label>
+              <input 
+                type="email" 
+                className="form-control fadein-anim" 
+                placeholder=""
+                value={email.value} 
+                onChange={(e) => this.handleInputChange('email', e)}
+                aria-required="true"
+                aria-invalid={!email.valid && email.touched}
+                required
+              />
+              {!email.valid && email.touched && (
+                <span className="error-message">Email is not valid</span>
+              )}
+            </div>
+            <div className={styles.FormGroup}>
+              <label>Comment</label>
+              <textarea 
+                className="form-control fadein-anim" 
+                placeholder=""
+                value={message.value} 
+                onChange={(e) => this.handleInputChange('message', e)}
+                rows="4"
+                aria-required="true"
+                aria-invalid={!message.valid && message.touched}
+                required
+              ></textarea>
+              {!message.valid && message.touched && (
+                <span className="error-message">Message is required</span>
+              )}
+            </div>
             {error && (
               <>
                 {errorMessages !== null ? (
@@ -201,7 +207,7 @@ export default class ContactForm extends Component {
                 className="btn btn-unfilled scalein-anim"
                 aria-label="Send message"
               >
-                Send message
+                SUBMIT
               </button>
             </div>
           </div>

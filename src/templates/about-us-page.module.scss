@@ -1,8 +1,14 @@
 .AboutUsSection {
-  hr {
-    height: 1px;
-    color: #e5e5e5;
-    background-color: #e5e5e5 !important;
+  h1 {
+    color: #337ab7!important;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
   }
   h3 {
     text-align: center;

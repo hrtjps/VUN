@@ -1,6 +1,16 @@
 .ContactForm{
   text-align: left;
   margin: 20px 0;
+  .FormGroup {
+    margin-bottom: 20px;
+    label {
+      display: inline-block;
+      max-width: 100%;
+      margin-bottom: 5px;
+      font-weight: 700;
+    }
+  }
+
   button{
     margin: 10px 0 0;
   }

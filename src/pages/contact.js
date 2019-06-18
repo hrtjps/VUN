@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/SEO"
 
 import { LayoutContext } from "../components/Layout"
-import ContactForm from "../components/ContactForm/ContactForm";
+import ContactPageTemplate from "../templates/contact-page";
 
 export const query = graphql`
   query {
@@ -14,8 +14,17 @@ export const query = graphql`
         title
       }
     }
-    background: file(relativePath: { eq: "contact.jpg" }) {
-      ...fluidImageBig
+    markdownRemark(frontmatter: { templateKey: { eq: "contact-us-page" } }) {
+      id
+      html
+      frontmatter {
+        title
+        info {
+          address
+          city
+          email
+        }
+      }
     }
   }
 `
@@ -35,14 +44,9 @@ const ContactPage = ({ data, location }) => {
         }}
       </LayoutContext.Consumer>
       
+      <ContactPageTemplate data={data}/>
      
-        <div className="row align-items-center">
-          <div className="col-md-6">
-          </div>
-          <div className="col-md-6">
-          <ContactForm/>
-          </div>
-        </div>
+        
     </>
   )
 }
