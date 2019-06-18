@@ -5,7 +5,6 @@ author: user
 type: post
 date: 2019-06-15T13:21:36+00:00
 url: /
-featured_image: ./imgs/all.jpg
 headerLeftTheme: dark
 headerRightTheme: dark
 categories:

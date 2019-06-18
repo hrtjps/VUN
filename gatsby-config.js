@@ -89,6 +89,14 @@ module.exports = {
     'gatsby-plugin-offline',
     `gatsby-plugin-feed`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-robots-txt`
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-modal-routing`,
+    {
+      resolve: `gatsby-plugin-modal-routing`,
+      options: {
+        appElement: '#___gatsby',
+        modalProps: {},
+      }
+    }
   ],
 }

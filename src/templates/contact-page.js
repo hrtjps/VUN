@@ -26,8 +26,8 @@ const ContactPageTemplate = ({ data }) => {
         }}
       </LayoutContext.Consumer>
 
-      <div class="container">
-        <div class={styles.ContactSection}>
+      <div className="container">
+        <div className={styles.ContactSection}>
           <h1>Contact us</h1>
           <div className="row">
             <div className="col-md-6">

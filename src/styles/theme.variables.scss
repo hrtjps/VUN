@@ -30,3 +30,15 @@ $colorError: rgb(228, 24, 24);
   background: linear-gradient(45deg, $bottom 0%,$top 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$bottom, endColorstr=$top,GradientType=1 );
 }
+
+.ReactModal__Overlay{
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.65) !important;
+  .ReactModal__Content
+  {
+      top: 15% !important;
+      left: 15% !important;
+      right: 15% !important;
+      bottom: 15% !important;
+  }
+}

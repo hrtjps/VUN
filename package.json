@@ -16,6 +16,7 @@
     "gatsby-plugin-gtag": "^1.0.8",
     "gatsby-plugin-layout": "^1.0.12",
     "gatsby-plugin-manifest": "^2.0.21",
+    "gatsby-plugin-modal-routing": "^1.0.0",
     "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-page-load-delay": "^0.1.2",
     "gatsby-plugin-page-transitions": "^1.0.7",
@@ -37,6 +38,7 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
+    "react-modal": "^3.8.1",
     "react-typography": "^0.16.18",
     "typography": "^0.16.18",
     "typography-breakpoint-constants": "^0.16.18"

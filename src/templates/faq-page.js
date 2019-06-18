@@ -11,7 +11,7 @@ import PaymentSection from "../components/PaymentSection/PaymentSection";
 // import MemberSection from "../components/Members";
 // import AssistanceSection from "../components/Assistance";
 
-const AbuotUsPageTemplate = ({ data }) => {
+const FaqPageTemplate = ({ data }) => {
   const page_data = data.markdownRemark.frontmatter;
   const { headerLeftTheme, headerRightTheme } = page_data;
 
@@ -39,12 +39,12 @@ const AbuotUsPageTemplate = ({ data }) => {
     </>
   )
 }
-AbuotUsPageTemplate.propTypes = {
+FaqPageTemplate.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
     }),
   }),
 }
-export default AbuotUsPageTemplate
+export default FaqPageTemplate
 
