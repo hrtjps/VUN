@@ -7,13 +7,13 @@ import SEO from "../components/SEO"
 import AboutUsPageTemplate from "../templates/about-us-page";
 
 export const query = graphql`
-  query FaqPageTemplate {
+  query PrivacyPageTemplate {
     site {
       siteMetadata {
         title
       }
     }
-    markdownRemark(frontmatter: { templateKey: { eq: "faq-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "privacy-page" } }) {
       id
       excerpt(pruneLength: 160)
       html
@@ -24,7 +24,7 @@ export const query = graphql`
   }
 `
 
-const FaqPage = ({ data }) => {
+const AboutUsPage = ({ data }) => {
 
   return (
     <>
@@ -37,4 +37,4 @@ const FaqPage = ({ data }) => {
   )
 }
 
-export default FaqPage
+export default AboutUsPage

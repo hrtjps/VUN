@@ -12,7 +12,7 @@ categories:
 
 ---
 # Frequent questions
-----------------
+
 **What is the process to apply for a Visa? (Under 18 years of age)**
 * Start by applying at the following link -  https://en.visausanow.com/application.php  
 It is better if you have your passport information ready so that we can schedule your interview at the embassy as soon as possible.  

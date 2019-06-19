@@ -12,7 +12,6 @@ categories:
 
 ---
 # About
-----------------
 
 ### Thousands of applications processed 98.7% success rate
 
