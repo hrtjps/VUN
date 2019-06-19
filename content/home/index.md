@@ -1,15 +1,7 @@
 ---
 templateKey: 'home-page'
 title: Visa USA Now; B1 Business Visa and B2 Tourist Visas for the USA
-author: user
-type: post
-date: 2019-06-15T13:21:36+00:00
-url: /
 featured_image: ./imgs/homepage_bannerv3.jpg
-headerLeftTheme: dark
-headerRightTheme: dark
-categories:
-  - Case Study
 summary:
   title: VISAS FOR TOURIST AND FOR BUSINESS IN THE U.S
   desciption: 'Welcome to VisaUSANow, for your visa assistance needs. Our friendly and knowledgeable agents will help you prepare all the paperwork on your behalf, saving you hundreds of dollars in fees, and passing those savings on to you! We specialize in F1 Student Visas, DS160 application for Tourist/Business Visas, N400 Naturalization Forms, K1 Fiancée Visas, CR1 Spousal Visas.'

@@ -2,15 +2,14 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import SEO from "../components/SEO"
-import { LayoutContext } from "../components/Layout"
 
 import styles from "./blog-post.module.scss"
 import arrowIcon from "../assets/images/arrow-icon.svg"
+import SearchForm from "../components/SearchForm/SearchForm";
 
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { previous } = pageContext
-  const { headerLeftTheme, headerRightTheme, categories } = post.frontmatter;
 
   let background = post.frontmatter['featured_image']
   if(background){
@@ -23,33 +22,19 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         description={post.frontmatter.description || post.excerpt}
       />
 
-      <LayoutContext.Consumer>
-        {({setHeaderLeftTheme, setHeaderRightTheme}) => {
-          setHeaderLeftTheme(headerLeftTheme || 'light');
-          setHeaderRightTheme(headerRightTheme || 'dark');
-        }}
-      </LayoutContext.Consumer>
-
-
-     
-
+      <div className="container">
         {previous && (
-          <Link className={styles.Next} to={previous.fields.slug} rel="next">
+          <Link to={previous.fields.slug} rel="next">
             <i>Next Post</i>
-            <img src={arrowIcon} alt={previous.frontmatter.title} />
           </Link>
         )}
-
-        <div className="row justify-content-end">
-          <div className="col-md-6">
+        <div className="row">
+          <div className="col-md-8">
             <article className={styles.Post}>
               <div className={[
                 styles.Header,
                 'align-center'
               ].join(' ')}>
-                {categories && (
-                  <i className={styles.Category}>{categories[0]}</i>
-                )}
                 <h1 className={styles.Title}>{post.frontmatter.title}</h1>
                 <span className={styles.Date}>{post.frontmatter.date}</span>
               </div>
@@ -57,7 +42,17 @@ const BlogPostTemplate = ({ data, pageContext }) => {
               <div className={styles.Content} dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </article>
           </div>
+          <div className="col-md-4">
+            <SearchForm/>
+          </div>
         </div>
+
+        {previous && (
+          <Link  to={previous.fields.slug} rel="next">
+            <i>Next Post</i>
+          </Link>
+        )}
+      </div>
     </>
   )
 }
@@ -77,10 +72,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        headerLeftTheme
-        headerRightTheme
-        categories
-        tags
+        templateKey
         date(formatString: "MMMM DD, YYYY")
         featured_image {
           childImageSharp{

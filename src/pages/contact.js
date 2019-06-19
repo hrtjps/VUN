@@ -7,6 +7,16 @@ import SEO from "../components/SEO"
 import { LayoutContext } from "../components/Layout"
 import ContactPageTemplate from "../templates/contact-page";
 
+export const fixedImageMedium = graphql`
+  fragment fixedImageMedium on File {
+    childImageSharp {
+      fixed(width: 600) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     site {

@@ -1,15 +1,7 @@
 ---
 templateKey: 'c1-transit-visa-page'
 title: Visa USA Now; B1 Business Visa and B2 Tourist Visas for the USA
-author: user
-type: post
-date: 2019-06-15T13:21:36+00:00
-url: /
 featured_image: ./imgs/all.jpg
-headerLeftTheme: dark
-headerRightTheme: dark
-categories:
-  - Case Study
 intro:
   title: Get Assistance in Applying for Your C1 Transit Visa
   subtitle: Over 1,060 applicants approved from and across the globe!

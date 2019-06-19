@@ -1,15 +1,7 @@
 ---
 templateKey: 'ds160-visas-tourist-work-page'
 title: Visa USA Now; B1 Business Visa and B2 Tourist Visas for the USA
-author: user
-type: post
-date: 2019-06-15T13:21:36+00:00
-url: /
 featured_image: ./imgs/all.jpg
-headerLeftTheme: dark
-headerRightTheme: dark
-categories:
-  - Case Study
 intro:
   title: Get Expert Assistance to Get Your Application DS160 for Tourist / Work Visa
   subtitle: More than 1,061 approved applicants worldwide!

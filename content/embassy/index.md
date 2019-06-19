@@ -1,14 +1,6 @@
 ---
 templateKey: 'embassy-page'
 title: Visa USA Now; B1 Business Visa and B2 Tourist Visas for the USA
-author: user
-type: post
-date: 2019-06-15T13:21:36+00:00
-url: /
-headerLeftTheme: dark
-headerRightTheme: dark
-categories:
-  - Case Study
 headercontent: 'Information regarding applying for a U.S. Visa can be obtained from the local U.S. embassy. The contact information for the local embassy is below.'
 footercontent: 'Please note: We are a 3rd party organization that assists with the process of obtaining B1 and/or B2 visas . We are not associated with the Department of State or any government agency nor are we a law firm. While we make every effort to help you get the visa that you are seeking, we cannot guarantee results in any way. Ultimately, the acceptance of your application will depend on the US government.'
 

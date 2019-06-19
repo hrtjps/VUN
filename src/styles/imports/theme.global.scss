@@ -182,16 +182,3 @@ html{
 /**
  *  Blog
  */
-
-.recent-posts-header{
-  position: relative;
-  text-align: center;
-  transform: translateY(-50%);
-  z-index: 99;
-  span{
-    display: inline-block;
-    padding: 20px 45px;
-    background: $colorAccent;
-    color: #fff;
-  }
-}

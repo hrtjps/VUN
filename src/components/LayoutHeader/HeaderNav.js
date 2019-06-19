@@ -94,7 +94,7 @@ class HeaderNav extends Component {
             <Link to="/embassy" activeClassName={styles.Active}>Embassy Info</Link>
           </li>
           <li>
-            <Link to="/" activeClassName={styles.Active}>Apply for Visa</Link>
+            <Link to="/application" activeClassName={styles.Active}>Apply for Visa</Link>
           </li>
         </ul>
       </nav>

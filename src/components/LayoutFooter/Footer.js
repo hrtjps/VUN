@@ -31,7 +31,7 @@ class Footer extends Component {
               <li><Link to="/contact/">Contact Us</Link></li>
               <li><Link to="/teams/" state={{modal: true}}>Terms And Conditions</Link></li>
               <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/blog/">Blog</Link></li>
+              <li><Link to="/blog/page/1">Blog</Link></li>
             </ul>
             <p>Copyright © visausanow.com. All rights reserved.</p>
           </div>
