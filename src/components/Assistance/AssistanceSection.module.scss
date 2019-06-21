@@ -5,10 +5,15 @@
   border: 1px solid #000;
   padding-bottom: 1px;
   margin-top: 20px;
+
+  @media(max-width: 767px){
+    flex-direction: column-reverse;
+
+  }
   // color: black;
   .HeaderContent {
-    min-height: 615px;
-    max-width: 50%;
+    // min-height: 615px;
+    // max-width: 50%;
     background: #deeff7;
     padding: 24px;
     .HeaderTitle {
@@ -40,8 +45,21 @@
       padding: 20px 0;
     }
   }
+  
   .HeaderImg {
-    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 708px;
+    div {
+      width: 100% !important;
+      height: auto !important;
+      picture {
+        img {
+          position: unset !important;
+        }
+      }
+    }
   }
   
 }

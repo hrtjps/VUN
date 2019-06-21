@@ -7,12 +7,21 @@
   padding-right: 10px;
   margin-bottom: 20px;
   
-  [class*="gatsby-image-wrapper"]{
-    width: 100% !important;
-    img{
-      width: 100%;
-      min-height: 270px;
-      display: block;
+  .BlogImg {
+    margin: 0;
+    width: 100%;
+    div {
+      width: 100% !important;
+      height: auto !important;
+      img {
+        margin-bottom: 0;
+      }
+      picture {
+        img {
+          position: unset !important;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 

@@ -8,10 +8,12 @@ import arrowIcon from "../../assets/images/arrow-icon.svg"
 const BlogPost = ({ title, excerpt, image, date, url, index }) => {
   return (
     <article className={styles.BlogPost}>
-      {image ? 
-        <Img fixed={image.childImageSharp.fixed} alt={title} /> 
-        : null
-      }
+      <div className={styles.BlogImg}>
+        {image ? 
+          <Img fixed={image.childImageSharp.fixed} alt={title} /> 
+          : null
+        }
+      </div>
       <div className={styles.Post}>
         <h3><Link to={url}> {title} </Link> </h3>
         <div className={styles.Date}>{date}</div>

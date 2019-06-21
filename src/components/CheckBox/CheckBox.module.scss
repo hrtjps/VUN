@@ -1,6 +1,12 @@
 @import "src/styles/theme.variables.scss";
 
-svg {
-  color: #82c859;
-  // border: 2px solid #82c859;
+.CheckBox {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  min-width: 70px;
+  svg {
+    color: #82c859;
+    margin-right: 5px;
+  }
 }

@@ -1,22 +1,14 @@
 @import "src/styles/theme.variables.scss";
 
-.Header {
-  width: 100%;
-  background: white;
-  position: fixed;
-  z-index: 600;
-}
-
 .HomeIcon {
   font-size: 1.5rem;
   color: greenyellow;
 }
-.HeaderTitle {
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  // align-items: center;
-  position: static;
+.Header {
+  width: 100%;
+  background: white;
+  position: relative;
+  z-index: 600;
   &::before {
     content: "";
     position: absolute;
@@ -27,27 +19,14 @@
     background: linear-gradient(90deg,#123b78,#123b78 50%,#e9ecef 0);
     z-index: -1;
   }
-  .HeaderLogo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 35px;
-    position: relative;
-    // width: 41.666667%;
-    
-    .HeaderLogoImg {
-      width: 100px;
-      margin-bottom: 0px;
-    }
-  }
 
-  .HeaderDescription {
-    position: relative;
-    padding: 10px 30px;
+  .HeaderTitle {
+    // height: 120px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    max-width: 320px;
+    // align-items: center;
+    position: static;
     &::before {
       content: "";
       position: absolute;
@@ -55,78 +34,123 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: #e9ecef;
+      background: linear-gradient(90deg,#123b78,#123b78 100%,#e9ecef 0);
       z-index: -1;
-      transform: skewX(-20deg);
     }
-    .HeaderDescriptionText {
-      &::after {
-        content: "";
-        width: 7px;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -7px;
-        right: 0;
-        background: linear-gradient(0deg,#cf0202,#cf0202 70%,transparent 0);
-        z-index: -1;
-        transform: skewX(-20deg);
+    .HeaderLogo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 35px;
+      position: relative;
+      // width: 41.666667%;
+      
+      .HeaderLogoImg {
+        width: 100px;
+        margin-bottom: 0px;
       }
     }
 
-  }
-  .HeaderContact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    padding: 30px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #ced4da;
-      z-index: -1;
-      transform: skewX(-20deg);
+    .HeaderDescription {
+      position: relative;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 320px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #e9ecef;
+        z-index: -1;
+        transform: skewX(-20deg);
+      }
+      @media(max-width: 767px){
+        display: none
+      }
+      .HeaderDescriptionText {
+        &::after {
+          content: "";
+          width: 7px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -7px;
+          right: 0;
+          background: linear-gradient(0deg,#cf0202,#cf0202 70%,transparent 0);
+          z-index: -1;
+          transform: skewX(-20deg);
+        }
+      }
+
     }
-    
-    .HeaderContactDescription {
-        font-size: .8rem;
-        font-weight: 300;
+    .HeaderContact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      padding: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #ced4da;
+        z-index: -1;
+        transform: skewX(-20deg);
+      }
+      @media(max-width: 767px){
+        display: none;
+      }
+      .HeaderContactDescription {
+          font-size: .8rem;
+          font-weight: 300;
+      }
+
+      .HeaderContactPhone {
+          color: #cf0202;
+          font-size: .9rem;
+          font-weight: 700;
+      }
     }
 
-    .HeaderContactPhone {
-        color: #cf0202;
-        font-size: .9rem;
-        font-weight: 700;
-    }
-  }
 
-
-  .HeaderMenu {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 30px;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #e9ecef;
-      z-index: -1;
-      transform: skewX(-20deg);
+    .HeaderMenu {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 30px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #e9ecef;
+        z-index: -1;
+        transform: skewX(-20deg);
+      }
+      @media(max-width: 767px){
+        padding: 5px 20px
+      }
+      .LiveChat {
+        margin-bottom: 0.5rem;
+        width: 160px;
+      }
     }
   }
 }
+
 .NavBar {
   width: 100%;
   height: 55px;
@@ -136,9 +160,9 @@
   align-items: center;
   justify-content: center;
 
-  padding-left: 10%;
-  padding-right: 10%;
-
+  @media(max-width: 767px){
+    height: 100%;
+  }
 }
 
 .Logo{
@@ -222,7 +246,7 @@
     background: none;
     display: block;
     padding: 3px 0 8px;
-    margin: 0 10px;
+    margin: 0 0;
     position: relative;
     text-decoration: none!important;
     transition: color 1s;
@@ -266,7 +290,7 @@
 
 .NavButton{
   order: 2;
-  display: block;
+  display: none;
   width: 38px;
   height: 38px;
   min-width: 38px;
@@ -298,135 +322,38 @@
   }
 }
 
-.Opened{
-  .Line2{
-    opacity: 0;
-    transform: translate(10px, 0);
-  }
-  .Line1{
-    transform: translateY(8px) rotate(-45deg);
-  }
-  .Line3{
-    transform: translateY(-8px) rotate(45deg);
-  }
-}
 
 @media(max-width: 767px){
-  .HeaderLogo{
-    top: 15px;
-    left: 15px;
-  }
   .HeaderSideLogo{
     display: none;
   }
-  .Nav{
-    top: 25px;
-    right: 15px;
-  }
   .NavButton{
-    background: #fff;
+    // background: #fff;
+    cursor: pointer;
+    display: block;
     z-index: 9000;
     transition: background .3s;
   }
-  .Light{
-    .NavButton {
-      background: none;
-      span{
-        background: #fff;
-      }
-    }
-  }
   .Nav{
     z-index: 9999;
-    ul{
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      padding: 30px 0;
+    ul {
+      display: none;
+      width: 100%;
+      // background: rgba(0,0,0,.3);
       flex-direction: column;
-      justify-content: center;
-      overflow: auto;
-      z-index: 8888;
-      transform: none;
-      transition: visibility .5s, opacity .5s;
-      &:before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: transparentize($colorPrimary, 0.1);
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: opacity .5s, transform .5s;
-      }
-    }
-    li{
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      font-size: 180%;
-      overflow: hidden;
-    }
-    &.Opened{
-      ul {
-        display: none;
-        // &:before{
-        //   transform: translateY(0);
-        //   opacity: 1;
-        // }
-      }
-      .NavButton {
-        background: $colorPrimary;
-        span{
-          background: #fff!important;
+
+      li {
+        // background-image: linear-gradient(red, yellow);
+        height: 40px;
+        border-top: 1px solid gray;
+        padding-left: 25px;
+        a {
+          max-width: unset;
         }
       }
-      a{
-        transform: translateX(0);
-        opacity: 1;
-      }
     }
-    a{
-      color: #fff;
-      margin: 0;
-      padding: 20px 30px;
+    .Opened {
       display: flex;
-      align-items: center;
-      width: 100%;
-      flex: 1;
-      font-weight: 600;
-      font-family: 'Poppins', Helvetica, sans-serif;
-      opacity: 0;
-      transform: translateX(-100px);
-      transition: background .3s, opacity .3s, transform .3s;
-      transition-delay: 0s, .1s, .1s;
-      &:after{
-        content: none;
-      }
-    }
-    a:hover,
-    a.Active{
-      background: $colorAccent;
-    }
-    li:nth-child(2) a{
-      transition-delay: 0s, .2s, .2s;
-    }
-    li:nth-child(3) a{
-      transition-delay: 0s, .3s, .3s;
-    }
-    li:nth-child(4) a{
-      transition-delay: 0s, .4s, .4s;
-    }
-    li:nth-child(5) a{
-      transition-delay: 0s, .5s, .5s;
-    }
-    li:nth-child(6) a{
-      transition-delay: 0s, .6s, .6s;
     }
   }
 }

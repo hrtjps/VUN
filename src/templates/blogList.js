@@ -24,7 +24,7 @@ const BlogListPage = ({ data, pageContext }) => {
     <div className="container">
       <h1>Blog</h1>
       <div className="row">
-        <div className="col-8">
+        <div className="col-12 col-md-8">
           {
             <div className={styles.Pagination}>  
               <Link className={styles.PaginationLink} 
@@ -63,7 +63,7 @@ const BlogListPage = ({ data, pageContext }) => {
             )
           })}
         </div>
-        <div className="col-4">
+        <div className="col-12 col-md-4">
           <SearchForm />
         </div>
       </div>

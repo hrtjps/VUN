@@ -1,15 +1,11 @@
 import React from "react"
 import PropTypes from 'prop-types'
 import SEO from "../components/SEO"
-import Img from "gatsby-image"
-import { Link } from "gatsby"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { LayoutContext } from "../components/Layout"
 
 import styles from "./embassy-page.module.scss"
 import PaymentSection from "../components/PaymentSection/PaymentSection";
-// import MemberSection from "../components/Members";
-// import AssistanceSection from "../components/Assistance";
 
 class EmbassyPageTemplate extends React.Component {
   constructor(props) {
@@ -59,11 +55,11 @@ class EmbassyPageTemplate extends React.Component {
                 <>
                   <h1 onClick={()=>this.viewList()} className={styles.DetailHeader}>U.S. Embassy in {this.state.current_country} information - {this.state.current_city.city_name}</h1>
                   <div className="row">
-                    <div className="col-8">
+                    <div className="col-12 col-sm-6 col-md-8 ">
                       {page_data.headercontent}
                       <div>Website: <a>{this.state.current_city.url}</a></div>
                     </div>
-                    <div className="col-4 align-center">
+                    <div className="col-12 col-sm-6 col-md-4 align-center">
                       <a className={styles.StartApp}>START APPLICATION</a>
                       <div className={styles.DetailInfo}>
                         <div className={styles.DetailIcon}><FontAwesomeIcon icon="map-marker-alt"></FontAwesomeIcon></div>

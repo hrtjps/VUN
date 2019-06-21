@@ -36,7 +36,7 @@ const HomePageTemplate = ({ data }) => {
               : null
             }
           </div>
-          <div>
+          <div className={styles.HeaderReason}>
             <div className={styles.TopReason}>
               <div className={styles.TopReasonTitle}>
                 {page_data.intro.title}

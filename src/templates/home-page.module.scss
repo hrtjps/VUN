@@ -4,34 +4,48 @@
   flex-wrap: wrap;
   padding:  16px;
   .HeaderImg {
-    margin: 0 15px;
-  }
-  .TopReason {
-    width: 340px;
-    // margin: 0 15px;
-    
-    .TopReasonTitle {
-      background-color: #ba102d;
-      border-radius: 10px 10px 0 0;
-      border: 1px solid #e7eae7;
-      text-align: center;
-      color: #fff;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 45px;
-      padding: 0;
-      margin-bottom: 0;
+    margin: 0 5px;
+    width: 100%;
+    max-width: 708px;
+    div {
+      width: 100% !important;
+      height: auto !important;
+      picture {
+        img {
+          position: unset !important;
+        }
+      }
     }
-    .TopReasonContent {
-      border: 1px solid #e7eae7;
-      .TopReasonItem {
-        font-size: 15px;
-        font-weight: 500;
-        padding-left: 50px;
-        background-image: url(../assets/images/list-ok-icon.png);
-        background-repeat: no-repeat;
-        background-position: 20px 5px;
-        line-height: 25px;
+  }
+  .HeaderReason {
+    margin: 0 5px;
+    .TopReason {
+      max-width: 340px;
+      // margin: 0 15px;
+      
+      .TopReasonTitle {
+        background-color: #ba102d;
+        border-radius: 10px 10px 0 0;
+        border: 1px solid #e7eae7;
+        text-align: center;
+        color: #fff;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 45px;
+        padding: 0;
+        margin-bottom: 0;
+      }
+      .TopReasonContent {
+        border: 1px solid #e7eae7;
+        .TopReasonItem {
+          font-size: 15px;
+          font-weight: 500;
+          padding-left: 50px;
+          background-image: url(../assets/images/list-ok-icon.png);
+          background-repeat: no-repeat;
+          background-position: 20px 5px;
+          line-height: 25px;
+        }
       }
     }
   }
@@ -88,6 +102,7 @@
     .HowWorkItem {
       background: #ba1732;
       padding: 20px;
+
       border-radius: 100px;
       height: 190px;
       width: 190px;
@@ -95,7 +110,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin: 0 5px;
+      margin: 5px;
       .HowWorkItemImg {
         width: 65px;
         height: 65px;

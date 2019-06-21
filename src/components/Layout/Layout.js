@@ -18,7 +18,6 @@ const Layout = ({ children, location, pageContext }) => {
               <Header themeLeft={headerLeftTheme} themeRight={headerRightTheme} />
             )}
           </LayoutContext.Consumer>
-          <div className={styles.HeaderGap}>-</div>
           <main className={styles.Main}>
             {children}         
           </main>

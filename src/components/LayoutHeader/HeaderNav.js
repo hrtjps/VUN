@@ -52,52 +52,53 @@ class HeaderNav extends Component {
 
   render() {
     // const { theme } = this.props;
-    // const { navOpened, forceDarkTheme } = this.state;
+    const { navOpened, forceDarkTheme } = this.state;
 
     return (
-      <nav 
-        className={[
-          styles.Nav,
-          styles.Light,
-          styles.Opened
-        ].join(' ')}
-        aria-label="Main"
-      >
-        {/* <button 
-          className={styles.NavButton} 
-          onClick={this.toggleNav}
-          aria-label="Toggle navigation"
-          aria-haspopup="true"
-          aria-expanded={navOpened}
+      <>
+        <nav 
+          className={[
+            styles.Nav,
+            styles.Light,
+          ].join(' ')}
+          aria-label="Main"
         >
-          <span className={styles.Line1}></span>
-          <span className={styles.Line2}></span>
-          <span className={styles.Line3}></span>
-        </button> */}
-        <ul onClick={this.toggleNav}>
-          <li>
-            <Link to="/" activeClassName={styles.Active}><FontAwesomeIcon icon="home" className={styles.HomeIcon}></FontAwesomeIcon></Link>
-          </li>
-          <li>
-            <Link to="/ds160" activeClassName={styles.Active}>TOURIST / BUSINESS VISA(B1/B2)</Link>
-          </li>
-          <li>
-            <Link to="/c1-transit-visa" activeClassName={styles.Active}>C1 Transit Visa</Link>
-          </li>
-          <li>
-            <Link to="/about-us" activeClassName={styles.Active}>About Us</Link>
-          </li>
-          <li>
-            <Link to="/contact" activeClassName={styles.Active}>Contact Us</Link>
-          </li>
-          <li>
-            <Link to="/embassy" activeClassName={styles.Active}>Embassy Info</Link>
-          </li>
-          <li>
-            <Link to="/application" activeClassName={styles.Active}>Apply for Visa</Link>
-          </li>
-        </ul>
-      </nav>
+          <button
+            className={styles.NavButton}
+            onClick={this.toggleNav} 
+            aria-label="Toggle navigation"
+            aria-haspopup="true"
+            aria-expanded={navOpened}
+          >
+            <span className={styles.Line1}></span>
+            <span className={styles.Line2}></span>
+            <span className={styles.Line3}></span>
+          </button>
+          <ul onClick={this.toggleNav} className={navOpened?styles.Opened:null}>
+            <li>
+              <Link to="/" activeClassName={styles.Active}><FontAwesomeIcon icon="home" className={styles.HomeIcon}></FontAwesomeIcon></Link>
+            </li>
+            <li>
+              <Link to="/ds160" activeClassName={styles.Active}>TOURIST / BUSINESS VISA(B1/B2)</Link>
+            </li>
+            <li>
+              <Link to="/c1-transit-visa" activeClassName={styles.Active}>C1 Transit Visa</Link>
+            </li>
+            <li>
+              <Link to="/about-us" activeClassName={styles.Active}>About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact" activeClassName={styles.Active}>Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/embassy" activeClassName={styles.Active}>Embassy Info</Link>
+            </li>
+            <li>
+              <Link to="/application" activeClassName={styles.Active}>Apply for Visa</Link>
+            </li>
+          </ul>
+        </nav>
+      </>
     )
   }
 
