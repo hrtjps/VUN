@@ -152,17 +152,15 @@ export default class ApplicationPage extends Component{
     this.handleCountryChange = this.handleCountryChange.bind(this);
     this.handlePhoneInputBlur = this.handlePhoneInputBlur.bind(this);
     this.handlePhoneInputChange = this.handlePhoneInputChange.bind(this);
+
     this.onChangeFirstName = this.onChangeFirstName.bind(this);
+    this.onChangeMidName = this.onChan
   }
   onChangeFirstName(e) {
-    console.log(e);
     this.setState({
-      applicant_personal_info: {
-        name: {
-          first_name: e.target.value
-        }
-      }
+      [e.target.name]: e.target.value
     })
+    console.log(e.target.name);
   }
   handlePhoneInputChange(telNumber, selectedCountry) {
     console.log('input changed. number: ', telNumber, 'selected country: ', selectedCountry)
@@ -207,21 +205,17 @@ export default class ApplicationPage extends Component{
                 </div>
                 <div className="col-md-3 input_fields inline-mobile_">
                   <input maxLength="40" placeholder="Given Name (First Name)" onChange = {e => this.onChangeFirstName(e)} value = {this.state.applicant_personal_info.name.first_name}
-                    className="form-control input-md required valid validValue" type="text" />
-                  <i className="fa fa-check validCheck" aria-hidden="true" ></i>
-                  <span id="firstname-error" className="error" ></span>
+                    className="form-control input-md required valid validValue" type="text" 
+                    id="applicant_personal_info.name.first_name" name="applicant_personal_info.name.first_name"
+                    />
                 </div>
                 <div className="col-md-3 input_fields inline-mobile-middle_">
-                  <input maxLength="40" placeholder="Middle Name" onChange={e => this.onChangeMidName(e)} value={this.state.applicant_personal_info.name.mid_name}
-                    className="form-control input-md validValue valid" type="text" />
-                  <i className="fa fa-check validCheck" aria-hidden="true"></i>
+                  {/* <input maxLength="40" placeholder="Middle Name" onChange={e => this.onChangeMidName(e)} value={this.state.applicant_personal_info.name.mid_name}
+                    className="form-control input-md validValue valid" type="text" /> */}
                 </div>
                 <div className="col-md-3 input_fields inline-mobile_">
-                  <input maxLength="40" id="lastname" name="lastname" placeholder="Surname (Last Name)"
-                    className="form-control input-md required validValue valid" type="text" />
-                  <i className="fa fa-check validCheck" aria-hidden="true"></i>
-                  <i className="fa fa-question-circle _show_big" aria-hidden="true" data-toggle="tooltip" data-placement="right"
-                    title="(Please enter all given names. If you don't have a given name, please enter 'FNU'.)"></i>
+                  {/* <input maxLength="40" placeholder="Surname (Last Name)" onChange={e => this.onChangeLastName(e)} value={this.state.applicant_personal_info.name.last_name}
+                    className="form-control input-md required validValue valid" type="text" /> */}
                 </div>
                 <div className={styles.AddMoreBlock}>
                   <span ><FontAwesomeIcon icon="plus-circle"></FontAwesomeIcon> Add</span>

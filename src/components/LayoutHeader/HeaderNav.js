@@ -66,9 +66,6 @@ class HeaderNav extends Component {
           <button
             className={styles.NavButton}
             onClick={this.toggleNav} 
-            aria-label="Toggle navigation"
-            aria-haspopup="true"
-            aria-expanded={navOpened}
           >
             <span className={styles.Line1}></span>
             <span className={styles.Line2}></span>
