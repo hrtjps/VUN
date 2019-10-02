@@ -1,0 +1,17 @@
+
+.FooterPayment {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: white;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    li {
+      margin: 0 15px;
+    }
+  }
+
+}

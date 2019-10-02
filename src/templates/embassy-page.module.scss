@@ -1,0 +1,76 @@
+.EmbassySection {
+    h1 {
+    color: #337ab7!important;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .DetailHeader {
+    text-align: center;
+    cursor: pointer;
+  }
+  .StartApp {
+    align-self: center;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    background: #c12828;
+    text-transform: uppercase;
+    outline-offset: 0;
+    outline: 0;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.6);
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  .TagSection {
+    padding: 10px;
+    text-align: center;
+  }
+  .FooterContent {
+    margin-top: 10px;
+  }
+  .DetailInfo {
+    display: flex;
+    // align-items: center;
+    margin: 20px 0;
+    .DetailIcon {
+      line-height: 60px;
+      background: #eaeaea;
+      height: 64px;
+      width: 64px;
+      text-align: center;
+      font-size: 30px;
+      margin-right: 10px;
+    }
+    .DetailTitle {
+      text-align: left;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+  }
+  .Country {
+    .City {
+      padding-left: 50px;
+    }
+  }
+}

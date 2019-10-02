@@ -1,0 +1,60 @@
+@import "src/styles/theme.variables.scss";
+
+.Footer{
+  color: white;
+  position: relative;
+  .FooterContact {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #0e213c;
+
+    &::before{
+      content: "";
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      top: -4px;
+      background: #cf0202;
+    }
+
+    .FooterContactContent {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0;
+      a {
+        color: white;
+      }
+    }
+  }
+  .FooterLink {
+    background: #040a12;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      li {
+        padding: 0 15px;
+        a {
+          color: white;
+        }
+      }
+    }
+    p {
+      text-align: center;
+      font-style: italic;
+      padding-top: 10px;
+      font-size: .8rem;
+      margin: 0;
+    }
+  }
+
+  .FooterSummary {
+	  background: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }  
+}

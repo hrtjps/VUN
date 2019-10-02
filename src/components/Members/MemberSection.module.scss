@@ -1,0 +1,32 @@
+
+.MembersSection {
+  .GrayBackground {
+    background: #e9ecef;
+  }
+  .MemberItem {
+    display: flex;
+    padding: 30px 0;
+
+    @media(max-width: 479px){
+      flex-direction: column;
+      align-items: center;
+
+    }
+    .MemberImg {
+      width: 130px;
+      height: 130px;
+      background-position: center center;
+      background-size: cover;
+      margin: 0 auto;
+      border: 2px solid #0e213c;
+      border-radius: 50%;
+    }
+    .MemberItemContent {
+      margin-left: 40px;
+      @media(max-width: 479px){
+        margin-left: 0px;
+      }
+
+    }
+  }
+}

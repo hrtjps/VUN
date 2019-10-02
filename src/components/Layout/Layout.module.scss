@@ -1,0 +1,59 @@
+@import "src/styles/theme.variables.scss";
+
+.Border {
+  background: #eee;
+  position: fixed;
+  z-index: 9900;
+  &.Top,
+  &.Bottom{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+  }
+  &.Top{
+    top: auto;
+    bottom: 0;
+  }
+  &.Left,
+  &.Right{
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+  }
+  &.Right{
+    left: auto;
+    right: 0;
+  }
+}
+
+.Layout{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // margin: 30px;
+  min-height: 80vh;
+  min-height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.Main{
+  padding: 20px 0;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+@media(max-width: 767px){
+  .Border{
+    display: none;
+  }
+  .Layout{
+    margin: 0;
+  }
+}
+
+.HeaderGap {
+  height: 175px;
+}

@@ -1,0 +1,21 @@
+@import "src/styles/theme.variables.scss";
+
+.StartAppBtn {
+  background: #55bc10;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,.6);
+  &:hover {
+    background: #469b0d;
+    color: #333;
+    text-decoration: none;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  
+}

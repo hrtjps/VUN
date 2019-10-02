@@ -1,0 +1,90 @@
+/**
+ *  Font faces
+ */
+@font-face {
+  font-family: 'ModernLightItalic';
+  src: url('../assets/fonts/ModernLightItalic.eot?#iefix') format('embedded-opentype'),  
+		   url('../assets/fonts/ModernLightItalic.woff') format('woff'), 
+		   url('../assets/fonts/ModernLightItalic.ttf')  format('truetype'), 
+		   url('../assets/fonts/ModernLightItalic.svg#ModernLightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+ *  Typography
+ */
+
+body{
+	color: #212529 !important;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: $colorPrimary!important;
+	line-height: 1.1;
+  letter-spacing: -1px;
+  i{
+    font-size: 90%;
+  }
+}
+
+i{
+	font-family: 'ModernLightItalic', serif;
+	font-style: italic;
+  letter-spacing: -2px;
+}
+
+em{
+	font-size: 1.2rem;
+  font-style: normal;
+}
+
+small{
+	font-size: 0.7rem;
+}
+
+.align-center{ text-align: center; }
+.align-left{ text-align: left; }
+.align-right{ text-align: right; }
+
+/**
+ *  Color classes
+ */
+.bg-primary{ background: $colorPrimary; }
+.bg-accent{ background: $colorAccent; }
+.bg-succes{ background: $colorSuccess; }
+.bg-error{ background: $colorError; }
+.bg-gray{ background: #e6e7e8; }
+
+.c-primary{ color: $colorPrimary; }
+.c-accent{ color: $colorAccent; }
+.c-succes{ color: $colorSuccess; }
+.c-error{ color: $colorError; }
+
+.c-light{ color: #fff; }
+.c-light{
+  h1,h2,h3,h4,h5,h6,i{
+    color: #fff;
+  }
+}
+
+a{
+  color: $colorAccent;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+h1 {
+  color: #337ab7!important;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}

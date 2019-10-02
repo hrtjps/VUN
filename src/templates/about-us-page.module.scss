@@ -1,0 +1,42 @@
+.AboutUsSection {
+  h1 {
+    color: #337ab7!important;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  h3 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+    a {
+      align-self: center;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      border: 1px solid #ba102d;
+      border-radius: 30px;
+      margin-bottom: 15px;
+      background: #ba102d;
+      color: #fff;
+      margin-top: 24px;
+      &:hover {
+        background: #a00c25;
+        text-decoration: none;
+        touch-action: manipulation;
+      }
+    }
+  }
+}
